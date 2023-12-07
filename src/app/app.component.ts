@@ -7,14 +7,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public appPages = [
     { title: '', url: 'login', icon: 'person-circle' },
-    { title: 'Aplicar una multa', url: 'aplicar-multa', icon: 'mail' },
-    { title: 'Ver clima', url: 'clima', icon: 'paper-plane' },
-    { title: 'Consulta de conductor', url: 'consulta-conductor', icon: 'heart' },
-    { title: 'Ver horoscopo', url: 'horoscopo', icon: 'archive' },
-    { title: 'Mapa de multas', url: 'mapa-multas', icon: 'trash' },
-    { title: 'Multas registradas', url: 'multas-registradas', icon: 'warning' },
-    { title: 'Ver noticias', url: 'noticias', icon: 'warning' },
-    { title: 'Tarifario de multas', url: 'tarifario-multas', icon: 'warning' },
+    { title: 'Aplicar una multa', url: 'aplicar-multa', icon: 'newspaper' },
+    { title: 'Ver clima', url: 'clima', icon: 'cloudy-night' },
+    { title: 'Consulta de conductor', url: 'consulta-conductor', icon: 'id-card' },
+    { title: 'Ver horoscopo', url: 'horoscopo', icon: 'sparkles' },
+    { title: 'Mapa de multas', url: 'mapa-multas', icon: 'map' },
+    { title: 'Multas registradas', url: 'multas-registradas', icon: 'document' },
+    { title: 'Ver noticias', url: 'noticias', icon: 'clipboard' },
+    { title: 'Tarifario de multas', url: 'tarifario-multas', icon: 'file-tray' },
   ];
   
 }
