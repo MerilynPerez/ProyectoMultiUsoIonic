@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: '', url: 'login', icon: 'person-circle' },
     { title: 'Aplicar una multa', url: 'aplicar-multa', icon: 'newspaper' },
     { title: 'Ver clima', url: 'clima', icon: 'cloudy-night' },
     { title: 'Consulta de conductor', url: 'consulta-conductor', icon: 'id-card' },
@@ -15,6 +14,7 @@ export class AppComponent {
     { title: 'Multas registradas', url: 'multas-registradas', icon: 'document' },
     { title: 'Ver noticias', url: 'noticias', icon: 'clipboard' },
     { title: 'Tarifario de multas', url: 'tarifario-multas', icon: 'file-tray' },
+    { title: '', url: 'login', icon: 'person-circle' },
   ];
   
 }
