@@ -46,7 +46,11 @@ const routes: Routes = [
   {
     path: 'horoscopo',
     loadChildren: () => import('./horoscopo/horoscopo.module').then( m => m.HoroscopoPageModule)
+  },  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   }
+
 ];
 
 @NgModule({
