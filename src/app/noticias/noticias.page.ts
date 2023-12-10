@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NoticiasService } from '../servicios/noticias.service';
+
 
 @Component({
   selector: 'app-noticias',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./noticias.page.scss'],
 })
 export class NoticiasPage implements OnInit {
+  noticias: any[] = [];
 
-  constructor() { }
+  constructor(public noticiasService: NoticiasService) {}
 
   ngOnInit() {
+    this.obtenerNoticias();
   }
 
+  obtenerNoticias() {
+    this.noticiasService.obtenerNoticias().subscribe(
+      (data) => {
+        this.noticias = data;
+      },
+      (error) => {
+        console.error('Error al obtener noticias', error);
+      }
+    );
+  }
 }
