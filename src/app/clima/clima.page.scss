@@ -1,0 +1,24 @@
+ion-content {
+    --ion-background-color: #e1f5fe; /* Fondo de la aplicación (color claro) */
+  }
+  
+  ion-item {
+    margin-bottom: 10px;
+  }
+  
+  ion-button {
+    margin-top: 20px;
+  }
+  
+  ion-card {
+    background-color: #b3e0ff; /* Color de fondo del card */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra del card */
+  }
+  
+  ion-card-header {
+    background-color: #81d4fa; /* Color de fondo del encabezado del card */
+  }
+  
+  ion-card-content {
+    font-size: 18px;
+  }
