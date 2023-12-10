@@ -1,13 +1,20 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>noticias</ion-title>
+    <ion-title>
+      Noticias DIGESET
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">noticias</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list *ngIf="noticias" class="noticias-list">
+    <ion-item *ngFor="let noticia of noticias" class="noticia-item">
+      
+      <ion-label>
+        <h2 class="noticia-titulo">{{ noticia.title.rendered }}</h2>
+        <div class="noticia-contenido" [innerHTML]="noticia.excerpt.rendered"></div>
+        <a [href]="noticia.link" target="_blank" class="noticia-leer-mas">Leer más</a>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
