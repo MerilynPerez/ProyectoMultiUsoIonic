@@ -10,7 +10,6 @@ export class AppComponent {
     { title: 'Ver clima', url: 'clima', icon: 'cloudy-night' },
     { title: 'Consulta de conductor', url: 'consulta-conductor', icon: 'id-card' },
     { title: 'Ver horoscopo', url: 'horoscopo', icon: 'sparkles' },
-    { title: 'Mapa de multas', url: 'mapa-multas', icon: 'map' },
     { title: 'Multas registradas', url: 'multas-registradas', icon: 'document' },
     { title: 'Ver noticias', url: 'noticias', icon: 'clipboard' },
     { title: 'Tarifario de multas', url: 'tarifario-multas', icon: 'file-tray' },

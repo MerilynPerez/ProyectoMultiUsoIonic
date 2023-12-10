@@ -1,13 +1,40 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>multas-registradas</ion-title>
+    <ion-title>Multas Registradas</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">multas-registradas</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-list *ngIf="!expandedCard">
+    <ion-item *ngFor="let data of dataArray" (click)="expandCard(data)">
+      <ion-thumbnail slot="start">
+        <img [src]="data.foto" alt="Foto" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2> Cedula: {{ data.cedula }}</h2>
+        <p> Placa: {{ data.placa }}</p>
+        
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-card *ngIf="expandedCard">
+    <ion-card-header>
+      <ion-card-title> Cedula: {{ expandedCard.cedula }}</ion-card-title>
+      <ion-card-subtitle>Placa: {{ expandedCard.placa }}</ion-card-subtitle>
+      <ion-card-subtitle>Motivo: {{ expandedCard.motivo }}</ion-card-subtitle>
+      <ion-card-subtitle>Nota de Voz: {{ expandedCard.voz }}</ion-card-subtitle>
+      <ion-card-subtitle>Latitud: {{ expandedCard.latitud }}</ion-card-subtitle>
+      <ion-card-subtitle>Longitud: {{ expandedCard.longitud }}</ion-card-subtitle>
+      <ion-card-subtitle>Fecha y hora: {{ expandedCard.fechayhora }}</ion-card-subtitle>
+      <p>Comentario: {{ expandedCard.comentario }}</p>
+    </ion-card-header>
+    <ion-card-content>
+      <img [src]="expandedCard.foto" alt="Foto" />
+    
+      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="full" (click)="registrar()">Volver a aplicar multa</ion-button>
 </ion-content>
