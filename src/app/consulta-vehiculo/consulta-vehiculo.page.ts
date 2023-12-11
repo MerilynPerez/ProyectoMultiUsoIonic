@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ConsultaVehiculoService } from '../services/consulta-vehiculo.service';
 
 @Component({
   selector: 'app-consulta-vehiculo',
-  templateUrl: './consulta-vehiculo.page.html',
-  styleUrls: ['./consulta-vehiculo.page.scss'],
+  templateUrl: 'consulta-vehiculo.page.html',
+  styleUrls: ['consulta-vehiculo.page.scss'],
 })
-export class ConsultaVehiculoPage implements OnInit {
+export class ConsultaVehiculoPage {
+  placa!: string ;
+  vehiculo: any; 
 
-  constructor() { }
+  constructor(private consultaVehiculoService: ConsultaVehiculoService) {}
 
-  ngOnInit() {
+  buscarVehiculo() {
+    this.consultaVehiculoService.consultarPorPlaca(this.placa).subscribe(
+      vehiculo => {
+        this.vehiculo = vehiculo;
+      },
+      error => {
+        console.error('Error al consultar el vehículo:', error);
+      }
+    );
   }
-
 }

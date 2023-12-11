@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { MultaDetallePage } from './multas-detalle/multas-detalle.page';
+import { ConsultaVehiculoPage } from './consulta-vehiculo/consulta-vehiculo.page';
+import { ConsultaConductorPage } from './consulta-conductor/consulta-conductor.page';
 
 const routes: Routes = [
   {
@@ -51,7 +54,17 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
-  
+  {
+    path: 'multas-lista',
+    loadChildren: () => import('./multas-lista/multas-lista.module').then( m => m.MultasListaPageModule)
+  },
+  {
+    path: 'multas-detalle',
+    loadChildren: () => import('./multas-detalle/multas-detalle.module').then( m => m.MultasDetallePageModule)
+  },
+  { path: 'multas/:id', component: MultaDetallePage },
+  { path: 'consulta-vehiculo', component: ConsultaVehiculoPage },
+  { path: 'consulta-conductor', component: ConsultaConductorPage },
 
 ];
 
