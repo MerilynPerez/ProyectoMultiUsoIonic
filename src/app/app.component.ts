@@ -12,8 +12,9 @@ export class AppComponent {
     { title: 'Ver horoscopo', url: 'horoscopo', icon: 'sparkles' },
     { title: 'Multas registradas', url: 'multas-registradas', icon: 'document' },
     { title: 'Ver noticias', url: 'noticias', icon: 'clipboard' },
-    { title: 'Tarifario de multas', url: 'tarifario-multas', icon: 'file-tray' },
+    { title: 'Tarifario de multas', url: 'multas-lista', icon: 'file-tray' },
     { title: '', url: 'login', icon: 'person-circle' },
+    { title: 'Consulta vehiculo', url: 'consulta-vehiculo', icon: 'person-circle' },
   ];
   
 }
