@@ -13,7 +13,7 @@ export class ClimaPage {
 
   constructor(public weatherService: WeatherService) {}
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    //throw new Error('Method not implemented.');
   }
 
   getWeather() {
