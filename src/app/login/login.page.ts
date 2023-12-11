@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class LoginPage{
   usuario: string = "";
   clave: string = "";
+  accesoPermitido: boolean = false;
 
   constructor(private router: Router) {}
 
@@ -19,4 +20,5 @@ export class LoginPage{
       alert('Acceso denegado. Verifica tus credenciales.');
     }
   }
+  
 }
