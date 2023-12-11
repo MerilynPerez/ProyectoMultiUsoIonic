@@ -7,7 +7,7 @@ import { ConsultaConductorPage } from './consulta-conductor/consulta-conductor.p
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'aplicar-multa',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
