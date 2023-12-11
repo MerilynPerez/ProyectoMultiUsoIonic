@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MultasService, Multa } from '../services/multas.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-multas-lista',
@@ -7,11 +8,11 @@ import { MultasService, Multa } from '../services/multas.service';
   styleUrls: ['multas-lista.page.scss'],
 })
 export class MultasListaPage {
-  multas: Multa[] | undefined;
+  multas!: Multa[]; 
 
-  constructor(private multasService: MultasService) {}
+  constructor(private router: Router) {}
 
-  ionViewWillEnter() {
-    this.multas = this.multasService.getMultas();
+  irADetalleMulta(multaId: number) {
+    this.router.navigate(['/multa-detalle', multaId]);
   }
 }

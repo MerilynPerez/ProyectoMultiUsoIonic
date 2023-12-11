@@ -62,10 +62,9 @@ const routes: Routes = [
     path: 'multas-detalle',
     loadChildren: () => import('./multas-detalle/multas-detalle.module').then( m => m.MultasDetallePageModule)
   },
-  { path: 'multas/:id', component: MultaDetallePage },
   { path: 'consulta-vehiculo', component: ConsultaVehiculoPage },
   { path: 'consulta-conductor', component: ConsultaConductorPage },
-
+  { path: 'multa-detalle/:id', component: MultaDetallePage },
 ];
 
 @NgModule({
