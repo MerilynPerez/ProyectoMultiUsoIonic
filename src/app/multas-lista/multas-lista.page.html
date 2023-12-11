@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let multa of multas" routerLink="/multa/{{ multa.id }}">
+    <ion-item *ngFor="let multa of multas" routerLink="/multas/{{ multa.id }}">
       {{ multa.descripcion }} - {{ multa.monto | currency }}
     </ion-item>
   </ion-list>
