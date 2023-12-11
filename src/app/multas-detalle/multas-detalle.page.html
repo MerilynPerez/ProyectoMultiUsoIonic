@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/multas"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalle de Multa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="multa">
+    <ion-card-header>
+      {{ multa.descripcion }}
+    </ion-card-header>
+    <ion-card-content>
+      <p>Monto: {{ multa.monto | currency }}</p>
+      
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-text *ngIf="!multa">Multa no encontrada</ion-text>
+</ion-content>
