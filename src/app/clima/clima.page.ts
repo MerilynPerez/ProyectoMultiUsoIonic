@@ -7,8 +7,8 @@ import { WeatherService } from '../servicios/weather.service';
   styleUrls: ['./clima.page.scss'],
 })
 export class ClimaPage {
-  latitude: number = 0;
-  longitude: number = 0;
+  latitude: number = 18.474322;
+  longitude: number = -69.937026;
   weatherData: any;
 
   constructor(public weatherService: WeatherService) {}
