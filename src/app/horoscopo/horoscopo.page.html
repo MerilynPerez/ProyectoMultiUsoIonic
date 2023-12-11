@@ -1,20 +1,31 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Horoscopo
+      Horóscopo
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-item>
-    <ion-label position="floating">Ingresa tu signo zodiacal</ion-label>
-    <ion-input [(ngModel)]="signo" required></ion-input>
-  </ion-item>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Ingresa tu signo zodiacal</ion-label>
+        <ion-input [(ngModel)]="signo" required></ion-input>
+      </ion-item>
 
-  <ion-button expand="full" (click)="obtenerHoroscopo()">Obtener Horóscopo</ion-button>
+      <ion-button expand="full" (click)="obtenerHoroscopo()">Obtener Horóscopo</ion-button>
+    </ion-card-content>
+  </ion-card>
 
-  <ion-item *ngIf="horoscopo">
-    <ion-label>{{ horoscopo }}</ion-label>
-  </ion-item>
+  <ion-card *ngIf="horoscopo">
+    <ion-card-header>
+      Horóscopo
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>{{ horoscopo }}</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
