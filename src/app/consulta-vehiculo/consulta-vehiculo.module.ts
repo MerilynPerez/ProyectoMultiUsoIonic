@@ -18,3 +18,4 @@ import { ConsultaVehiculoPage } from './consulta-vehiculo.page';
   declarations: [ConsultaVehiculoPage]
 })
 export class ConsultaVehiculoPageModule {}
+
