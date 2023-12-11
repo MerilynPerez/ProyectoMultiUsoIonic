@@ -5,57 +5,55 @@
 </ion-header>
 
 <ion-content>
-  <ion-item>
-    <ion-label position="stacked">Cedula</ion-label>
-    <ion-input [(ngModel)]="cedula" type="text"></ion-input>
-  </ion-item>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Cedula</ion-label>
+        <ion-input [(ngModel)]="cedula" type="text"></ion-input>
+      </ion-item>
 
-  <ion-item>
-    <ion-label position="stacked">Placa del vehiculo</ion-label>
-    <ion-input [(ngModel)]="placa" type="text" ></ion-input>
-  </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Placa del vehiculo</ion-label>
+        <ion-input [(ngModel)]="placa" type="text" ></ion-input>
+      </ion-item>
 
-  <ion-item>
-    <ion-label position="stacked">Motivo de la Multa</ion-label>
-    <ion-input [(ngModel)]="motivo" ></ion-input>
-  </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Motivo de la Multa</ion-label>
+        <ion-input [(ngModel)]="motivo" ></ion-input>
+      </ion-item>
 
-  <ion-item>
-    <ion-label position="stacked">Foto de la evidencia</ion-label>
-    <ion-input [(ngModel)]="foto" ></ion-input>
-  </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Foto de la evidencia</ion-label>
+        <ion-input [(ngModel)]="foto" ></ion-input>
+      </ion-item>
 
+      <ion-item>
+        <ion-label position="stacked">Comentario</ion-label>
+        <ion-input [(ngModel)]="comentario"></ion-input>
+      </ion-item>
 
-  <ion-item>
-    <ion-label position="stacked">Comentario</ion-label>
-    <ion-input [(ngModel)]="comentario"></ion-input>
-  </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Nota de voz</ion-label>
+        <ion-input [(ngModel)]="voz"></ion-input>
+      </ion-item>
 
-  <ion-item>
-    <ion-label position="stacked">Nota de voz</ion-label>
-    <ion-input [(ngModel)]="voz"></ion-input>
-  </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Latitud</ion-label>
+        <ion-input [(ngModel)]="latitud"></ion-input>
+      </ion-item>
 
-  <ion-item>
-    <ion-label position="stacked">Latitud</ion-label>
-    <ion-input [(ngModel)]="latitud"></ion-input>
-  </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Longitud</ion-label>
+        <ion-input [(ngModel)]="longitud" type="text"></ion-input>
+      </ion-item>
 
-  <ion-item>
-    <ion-label position="stacked">Longitud</ion-label>
-    <ion-input [(ngModel)]="longitud" type="text"></ion-input>
-  </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Fecha y Hora</ion-label>
+        <ion-input [(ngModel)]="fechayhora" type="text" disabled></ion-input>
+      </ion-item>
 
-  <ion-item>
-    <ion-label position="stacked">Fecha y Hora</ion-label>
-    <ion-input [(ngModel)]="fechayhora" type="text" disabled></ion-input>
-  </ion-item>
-
-  
-
-  <!-- Botón de agregar -->
-  <ion-button expand="full" (click)="agregarRegistro()">Guardar</ion-button>
-  <ion-button expand="full" (click)="mostrarMapa()">Ver en el mapa</ion-button>
-  
-  
+      <ion-button expand="full" (click)="agregarRegistro()">Guardar</ion-button>
+      <ion-button expand="full" (click)="mostrarMapa()">Ver en el mapa</ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
