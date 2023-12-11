@@ -4,10 +4,15 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-item *ngFor="let multa of multas" routerLink="/multas/{{ multa.id }}">
-      {{ multa.descripcion }} - {{ multa.monto | currency }}
-    </ion-item>
-  </ion-list>
+<ion-content class="ion-padding">
+  <ion-card *ngFor="let multa of multas">
+    <ion-card-content>
+      <ion-item routerLink="/multas/{{ multa.id }}">
+        <ion-label>
+          <h2>{{ multa.descripcion }}</h2>
+          <p>{{ multa.monto | currency }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
