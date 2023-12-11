@@ -5,18 +5,21 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list *ngIf="!expandedCard">
-    <ion-item *ngFor="let data of dataArray" (click)="expandCard(data)">
-      <ion-thumbnail slot="start">
-        <img [src]="data.foto" alt="Foto" />
-      </ion-thumbnail>
-      <ion-label>
-        <h2> Cedula: {{ data.cedula }}</h2>
-        <p> Placa: {{ data.placa }}</p>
-        
-      </ion-label>
-    </ion-item>
-  </ion-list>
+  <ion-card *ngIf="!expandedCard">
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let data of dataArray" (click)="expandCard(data)">
+          <ion-thumbnail slot="start">
+            <img [src]="data.foto" alt="Foto" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2> Cedula: {{ data.cedula }}</h2>
+            <p> Placa: {{ data.placa }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 
   <ion-card *ngIf="expandedCard">
     <ion-card-header>
@@ -31,8 +34,6 @@
     </ion-card-header>
     <ion-card-content>
       <img [src]="expandedCard.foto" alt="Foto" />
-    
-      
     </ion-card-content>
   </ion-card>
 
